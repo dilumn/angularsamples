@@ -1,0 +1,24 @@
+<html>
+   <head>
+      <title>Testing123</title>
+      <script src = "http://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
+      <script src = "mainApp.js"></script>
+      <script src = "script.js"></script>      
+   </head>
+   
+   <body ng-app="mainApp">
+      <div ng-controller="Navigation">
+         
+         <button ng-click="include('template1.html')">Block 1</button>
+
+         <button ng-click="include('temp2.html')">Block 2</button>
+
+         <button ng-click="include('temp3.html')">Block 3</button>
+
+         <div ng-repeat="template in templates">
+            <div ng-include="template.url">Content from blocks goes here</div>
+         </div>
+
+      </div>
+   </body>
+</html>
