@@ -31,3 +31,27 @@ mainApp.controller('Navigation', ['$scope', function($scope){
 }]);
 
 
+// mainApp.directive('input', function() {
+//     return {
+//         restrict: 'E',
+//         require: 'ngModel',
+//         link: function (scope, element, attr, ngModel) {
+//           if (attr.type !== 'path') return;
+
+//           // Override the input event and add custom 'path' logic
+//           // element.unbind('input');
+//           // element.bind('input', function () {
+//           //   var path = this.value.replace(/\\/g, '/');
+
+//           //   scope.$apply(function () {
+//           //     ngModel.$setViewValue(path);
+//           //   });
+//           // });
+
+//           attr.type = "checkbox";
+//         }
+//     };
+// });
+
+
+

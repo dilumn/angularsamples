@@ -21,10 +21,17 @@
         <form name="userForm" novalidate>
             <div class="div1">
                 <div class="form-group" ng-repeat="firstUser in firstUsers">
-                    <label>{{ firstUser.name }}'s Email</label>
-                    <input type="text" class="form-control" name="email" ng-model="firstUser.email" required>
+                    
+                    <div class="col-lg-12" ng-switch on="firstUser.type">
+                        <label>{{ firstUser.name }}'s Email</label>
+                        <input ng-switch-when="text" type="text" name="" class="form-control" ng-model="firstUser.email" required >
+                        <input ng-switch-when="checkbox" type="checkbox" class="form-control" ng-model="firstUser.email" required >
+                        <input ng-switch-when="radio" type="radio" class="form-control" ng-model="firstUser.email" required >
+                        <input ng-switch-when="week" type="week" class="form-control" ng-model="firstUser.email" required >
+                        <input ng-switch-when="range" type="range" class="form-control" ng-model="firstUser.email" required >
+                    </div>
                     <br>
-
+                    
                     <div ng-show="firstUser.email">
                         <p>Tell us your email.<p>
                     </div>
@@ -39,9 +46,17 @@
 
             <div class="div2">
                 <div class="form-group" ng-repeat="secondUser in secondUsers">
-                    <label>{{ secondUser.name }}'s Email</label>
-                    <input type="text" class="form-control" name="email" ng-model="secondUser.email" required>
+
+                    <div class="col-lg-12" ng-switch on="secondUser.type">
+                        <label>{{ secondUser.name }}'s Email</label>
+                        <input ng-switch-when="text" type="text" name="" class="form-control" ng-model="secondUser.email" required >
+                        <input ng-switch-when="checkbox" type="checkbox" class="form-control" ng-model="secondUser.email" required >
+                        <input ng-switch-when="radio" type="radio" class="form-control" ng-model="firstUser.email" required >
+                        <input ng-switch-when="week" type="week" class="form-control" ng-model="firstUser.email" required >
+                        <input ng-switch-when="range" type="range" class="form-control" ng-model="firstUser.email" required >
+                    </div>
                     <br>
+
                     <div ng-show="secondUser.email">
                         <p>Tell us your email.<p>
                     </div>
