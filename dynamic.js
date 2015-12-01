@@ -27,10 +27,6 @@ mainApp.controller('DynamicController', ['$scope', function($scope){
         email: 'wikum@gmail.com' ,
       },
       {
-        name: 'Gayan',
-        email: 'Gayan@gmail.com' ,
-      },
-      {
         name: 'Dhanika',
         email: 'Dhanika@gmail.com' ,
       },
