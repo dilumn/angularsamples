@@ -1,6 +1,3 @@
-/*
-Factory implementation using 'dataAccessService' to provide data access to 'Emergency Contacts' controller
-*/
 (function (angular) {
     'use strict';
 
