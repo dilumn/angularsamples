@@ -1,9 +1,9 @@
 <html>
 <head>
-  <title>Testing123</title>
+  <title>Love You</title>
   <script src = "http://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
   <script src = "mainApp.js"></script>
-  <script src = "dynamic.js"></script>     
+  <script src = "custom.js"></script>     
 
   <style>
       div.box { background: #FFFFFF; height: 100px; width: 800px; }
@@ -15,8 +15,20 @@
 </head>
 
   <body ng-app="mainApp">
-    <div ng-controller="DynamicController">
-    Dilum Navanjana <input type="path" ng-model="value" />
-    <label>Value is here {{ value }}</label>
+    <div ng-controller="Navigation">
+    <input type="button" id="login" value="Click Here" ng-click="Login()" />
+
+    <div ng-show="isShow">
+
+      <div class="form-group" ng-repeat="name in names track by $index">
+        <h2>{{name}}</h2>
+      </div>
+
+      <img src="matti.jpg" alt="Mountain View" style="width:192px;height:256px;">
+
+    </div>
+
+  </div>
+
   </body>
 </html>
