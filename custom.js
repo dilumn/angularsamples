@@ -1,0 +1,13 @@
+mainApp.controller('Navigation', ['$scope', function($scope){
+
+   $scope.names=[];
+   $scope.isShow = false;
+
+   $scope.Login = function(templateURI) {
+      $scope.isShow = true;
+      $scope.names.push("Love you Matti");
+   }
+
+   
+
+}]);
