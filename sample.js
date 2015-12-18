@@ -384,7 +384,7 @@ Factory implementation using 'dataAccessService' to provide data access to 'Emer
   ,
   {
       "questionID": "3",
-      "type": "text",
+      "type": "select",
       "isAssesment": true
   }
   ,
@@ -501,15 +501,7 @@ Factory implementation using 'dataAccessService' to provide data access to 'Emer
       "content": "Textarea content here",
       "value": "65",
       "isAssesmentCheck": true,
-      "assesmentDate": "",
-      "workflow": {
-          "category": "showHide",
-          "workflowSender": {
-              "sectionID": "1",
-              "questionID": "4",
-              "logic": "Textcon"
-          }
-      }
+      "assesmentDate": ""
   },
   {
       "sectionID": "1",
@@ -518,21 +510,7 @@ Factory implementation using 'dataAccessService' to provide data access to 'Emer
       "content": "Dilum Content",
       "value": "55",
       "isAssesmentCheck": false,
-      "assesmentDate": "",
-      "workflow": {
-          "category": "sectionNavigation",
-          "sectionID": "2",
-          "workflowSender": {
-              "sectionID": "1",
-              "questionID": "2",
-              "logic": "test"
-          },
-          "workflowReceiver": {
-              "senderSectionID": "1",
-              "senderQuestionID": "2",
-              "show": false
-          }
-      }
+      "assesmentDate": ""
   },
 {
     "sectionID": "1",
@@ -550,15 +528,7 @@ Factory implementation using 'dataAccessService' to provide data access to 'Emer
       "content": "Height??",
       "value": "55",
       "isAssesmentCheck": false,
-      "assesmentDate": "",
-      "workflow": {
-          "category": "showHide",
-          "workflowReceiver": {
-              "senderSectionID": "1",
-              "senderQuestionID": "1",
-              "show": false
-          }
-      }
+      "assesmentDate": ""
   }]
 },
 {
@@ -577,11 +547,11 @@ Factory implementation using 'dataAccessService' to provide data access to 'Emer
                  },
                  {
                      "name": "No",
-                     "isChecked": true
+                     "isChecked": false
                  },
                  {
                      "name": "Nothing",
-                     "isChecked": false
+                     "isChecked": true
                  },
                  {
                      "name": "Last One",
@@ -590,7 +560,7 @@ Factory implementation using 'dataAccessService' to provide data access to 'Emer
 
       ],
       "value": "65",
-      "isAssesmentCheck": false,
+      "isAssesmentCheck": true,
       "assesmentDate": ""
   },
   {
@@ -607,7 +577,28 @@ Factory implementation using 'dataAccessService' to provide data access to 'Emer
       "sectionID": "2",
       "questionID": "3",
       "questionName": "Body weight",
-      "content": "textbox content",
+      "content": [
+          {
+              "id": "Option 111 to Select",
+              "text": "Option 111 to Select"
+          },
+          {
+              "id": "Option 2 to Select",
+              "text": "Option 2 to Select"
+          },
+          {
+              "id": "Option 3 to Select",
+              "text": "Option 3 to Select"
+          },
+          {
+              "id": "Option 4 to Select",
+              "text": "Option 4 to Select"
+          },
+          {
+              "id": "Option 5 to Select",
+              "text": "Option 5 to Select"
+          }
+      ],
       "value": "55",
       "isAssesmentCheck": true,
       "assesmentDate": ""
@@ -770,6 +761,158 @@ Factory implementation using 'dataAccessService' to provide data access to 'Emer
             ]
         };
 
+        //////////////////////////////////////////////////////////////////////////////////////////////////////
+        ////////////////////////////////////Workflow Json/////////////////////////////////////////////////////
+        //////////////////////////////////////////////////////////////////////////////////////////////////////
+
+        var workflowResponse = {
+            "formID": "1",
+            "sections": [
+{
+    "sectionID": "1",
+    "questions":
+[
+  {
+      "sectionID": "1",
+      "questionID": "1",
+      "workflow": {
+          "category": "showHide",
+          "workflowSender": {
+              "sectionID": "1",
+              "questionID": "4",
+              "logic": "Textcon"
+          }
+      }
+  },
+  {
+      "sectionID": "1",
+      "questionID": "2",
+      "workflow": {
+          "category": "sectionNavigation",
+          "sectionID": "2",
+          "workflowSender": {
+              "sectionID": "1",
+              "questionID": "2",
+              "logic": "test"
+          },
+          "workflowReceiver": {
+              "senderSectionID": "1",
+              "senderQuestionID": "2",
+              "show": false
+          }
+      }
+  },
+{
+    "sectionID": "1",
+    "questionID": "3"
+},
+  {
+      "sectionID": "1",
+      "questionID": "4",
+      "workflow": {
+          "category": "showHide",
+          "workflowReceiver": {
+              "senderSectionID": "1",
+              "senderQuestionID": "1",
+              "show": false
+          }
+      }
+  }]
+},
+{
+    "sectionID": "2",
+    "questions":
+[
+  {
+      "sectionID": "2",
+      "questionID": "1"
+  },
+  {
+      "sectionID": "2",
+      "questionID": "2"
+  }
+  ,
+  {
+      "sectionID": "2",
+      "questionID": "3"
+  }
+  ,
+  {
+      "sectionID": "2",
+      "questionID": "4"
+  },
+  {
+      "sectionID": "2",
+      "questionID": "5"
+  },
+  {
+      "sectionID": "2",
+      "questionID": "6"
+  },
+  {
+      "sectionID": "2",
+      "questionID": "7"
+  },
+  {
+      "sectionID": "2",
+      "questionID": "8"
+  }
+]
+},
+{
+    "sectionID": "3",
+    "questions":
+[
+  {
+      "sectionID": "3",
+      "questionID": "1"
+  },
+  {
+      "sectionID": "3",
+      "questionID": "2"
+  },
+  {
+      "sectionID": "3",
+      "questionID": "3"
+  },
+  {
+      "sectionID": "3",
+      "questionID": "4"
+  },
+  {
+      "sectionID": "3",
+      "questionID": "5"
+  },
+  {
+      "sectionID": "3",
+      "questionID": "6"
+  },
+  {
+      "sectionID": "3",
+      "questionID": "7"
+  },
+  {
+      "sectionID": "3",
+      "questionID": "8"
+  },
+  {
+      "sectionID": "3",
+      "questionID": "9"
+  },
+  {
+      "sectionID": "3",
+      "questionID": "10"
+  },
+  {
+      "sectionID": "3",
+      "questionID": "11"
+  }
+
+]
+}
+            ]
+        };
+
 
 
         var getResponseData = function () {
@@ -784,12 +927,16 @@ Factory implementation using 'dataAccessService' to provide data access to 'Emer
             return dataResponse;
         };
 
+        var getWorkflowData = function () {
+            return workflowResponse;
+        };
+
 
         var service = {
             getResponseData: getResponseData,
             getLayoutData: getLayoutData,
-            getSectionData: getSectionData
-
+            getSectionData: getSectionData,
+            getWorkflowData: getWorkflowData
         };
         return service;
 
