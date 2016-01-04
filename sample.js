@@ -578,7 +578,6 @@ Factory implementation using 'dataAccessService' to provide data access to 'Emer
       "sectionID": "3",
       "questionID": "11"
   }
-
 ]
 }
             ]
